@@ -15,7 +15,11 @@ nav {
     margin: .5rem auto;
     padding: 0 2rem 0 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+nav p {
+    font-weight: bold;
 }
 
 nav ul {
@@ -25,7 +29,7 @@ nav ul {
 
 nav li {
     list-style: none;
-    margin: 0 1rem;
+    margin: 0 .5rem;
 }
 
 nav a {
