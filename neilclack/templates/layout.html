@@ -4,16 +4,19 @@
     <head>
         <link rel="stylesheet" href="{% static 'css/global.css' %}" />
         <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block header %}
+        {% endblock %}
     </head>
     <body>
         <nav>
-            <div>
+            <span>
                 <p>Neil Clack</p>
-            </div>
-            <div id="navspacer">
+            </span>
+            <span id="navspacer">
                 <!-- Spacer -->
-            </div>
-            <div>
+            </span>
+            <span>
                 <ul>
                     <li>
                         <a href="#">Projects</a>
@@ -24,7 +27,7 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
-            </div>
+                </span>
         </nav>
         <main>
             {% block content %}
