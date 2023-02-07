@@ -11,8 +11,10 @@ class Category(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField(null=False)
-    github = models.URLField(null=True)
-    live = models.URLField(null=True)
+    # null = for the database to allow storing empty values
+    # blank = for data validation purposes allowing a blank entry to be accepted.
+    github = models.URLField(null=True, blank=True)
+    live = models.URLField(null=True, blank=True)
     image = models.ImageField(null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
