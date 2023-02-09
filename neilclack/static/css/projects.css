@@ -1,0 +1,44 @@
+.project-card {
+    padding: 2rem;
+    margin: auto;
+    text-align: left;
+    width: 60%;
+    display: flex;
+}
+
+.project-info {
+    width: 70%;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    padding: 1rem;
+    margin: 1rem;
+    width: 5rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 2px #c2c0c0 solid;
+    background: #dbdbdb;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 5px #c2c0c0;
+}
+
+.inactive-link {
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.project-image {
+    width: 30%;
+}
+
+.project-search {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}

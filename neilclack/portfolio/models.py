@@ -11,8 +11,6 @@ class Category(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField(null=False)
-    # null = for the database to allow storing empty values
-    # blank = for data validation purposes allowing a blank entry to be accepted.
     github = models.URLField(null=True, blank=True)
     live = models.URLField(null=True, blank=True)
     image = models.ImageField(null=True)

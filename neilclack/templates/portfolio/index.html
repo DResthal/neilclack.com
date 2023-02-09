@@ -1,7 +1,12 @@
 {% extends 'layout.html' %}
+{% load static %}
 {% block header %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 {% block content %}
-    <h1>Neil Clack</h1>
-    <h2>Software Development &amp; Data Analytics</h2>
+    <h1 class="heading">Neil Clack</h1>
+    <h2 class="subheading">Software Development &amp; Data Analytics</h2>
+    <div class="hero">
+        <img src="{% static 'images/hero.png' %}" alt="image" />
+    </div>
 {% endblock %}
