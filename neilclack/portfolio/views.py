@@ -11,4 +11,5 @@ def projects(request):
     context = {
         "projects" : projects
     }
+
     return render(request, "portfolio/projects.html", context)
