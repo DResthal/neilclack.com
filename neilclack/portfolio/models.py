@@ -19,4 +19,27 @@ class Project(models.Model):
     def __str__(self):
         return self.title
     
+class Resume(models.Model):
+    name = models.CharField(max_length=120)
+    title = models.CharField(max_length=120)
+    download = models.FileField(upload_to="resume", null=False)
     
+class Job(models.Model):
+    company = models.CharField(max_length=120, null=False)
+    title = models.CharField(max_length=120, null=False)
+    start = models.DateField(null=False)
+    end = models.DateField(null=True, blank=True)
+    current = models.BooleanField(null=False)
+    
+    def __str__(self):
+        return self.title + " at " + self.company
+
+    def startdate(self):
+        return (self.start.month, self.start.year)
+    
+    def enddate(self):
+        return (self.end.month, self.end.year)
+    
+class Bullet(models.Model):
+    bullet = models.TextField(null=False)
+    job   = models.ForeignKey(Job, on_delete=models.CASCADE)
