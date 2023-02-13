@@ -22,6 +22,7 @@ class Project(models.Model):
 class Resume(models.Model):
     name = models.CharField(max_length=120)
     title = models.CharField(max_length=120)
+    summary = models.TextField(max_length=240, null=True, blank=True)
     download = models.FileField(upload_to="resume", null=False)
     
 class Job(models.Model):
