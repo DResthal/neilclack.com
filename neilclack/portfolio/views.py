@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Resume, Job, Bullet
 
 
 
@@ -13,3 +13,16 @@ def projects(request):
     }
 
     return render(request, "portfolio/projects.html", context)
+
+def experience(request):
+    resume = Resume.objects.get()
+    jobs   = Job.objects.all()
+    bullets= Bullet.objects.all()
+    
+    context = {
+        "resume"  :resume,
+        "jobs"    :jobs,
+        "bullets" :bullets
+    }
+    
+    return render(request, "portfolio/experience.html", context)
