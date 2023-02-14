@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block header %}
-<link rel="stylesheet" href="{% static 'css/content.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/resume.css' %}"/>
 {% endblock %}
 {% block content %}
-    <h1>{{ resume.name }}</h1>
-    <h2>{{ resume.title }}</h2>
-    <p>{{ resume.summary }}</p>
+    <h1 class="title">{{ resume.name }}</h1>
+    <h2 class="sub-title">{{ resume.title }}</h2>
+    <p class="resume-summary">{{ resume.summary }}</p>
     {% for j in jobs %}
         <div class="job-card">
             <p class="job-title">{{ j.title }}</p>
@@ -18,9 +18,11 @@
                                             {% endif %}
             </p>
             <div class="job-description">
+                <ul>
                 {% for b in bullets %}
-                    <p class="jd-bullet">{{b.bullet}}</p>
+                    <li class="jd-bullet">{{b.bullet}}</li>
                 {% endfor %}
+                </ul>
             </div>
         </div>
     {% endfor %}

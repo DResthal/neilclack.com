@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
     <head>
+        <title>Neil Clack | Home</title>
+        <meta name="description"
+              content="Neil Clack's Portfolio and Corner of the Web"/>
+        <meta name="keywords" content=""/>
+        <meta name="viewport"
+              content="width=device-widtmyFunctionh, initial-scale=1.0"/>
         <link rel="stylesheet" href="{% static 'css/global.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% block header %}
-        {% endblock %}
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+              rel="stylesheet"
+              type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}"
+              rel="stylesheet"
+              type="text/css">
+        <script type="text/javascript" src="{% static 'js/nav.js' %}"></script>
+        {% block head %}
+        {% endblock head %}
     </head>
     <body>
-        <nav>
-            <span>
-                <a href={%url 'index'%}><p>Neil Clack</p></a>
-            </span>
-            <span id="navspacer">
-                <!-- Spacer -->
-            </span>
-            <span>
-                <ul>
-                    <li>
-                        <a href={% url 'index'%}>Home</a>
-                    <li>
-                        <a href={% url 'projects'%}>Projects</a>
-                    </li>
-                    <li>
-                        <a href={% url 'experience' %}>Experience</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </span>
-        </nav>
+        <div class="topnav">
+            <a href="#" class="logo">Neil Clack</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="nav-links" class="hide-nav">
+                <a href="#" onclick="toggleNav()">Projects</a>
+                <a href="#" onclick="toggleNav()">Resume</a>
+                <a href="#" onclick="toggleNav()">Contact</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
         <main>
             {% block content %}
-            {% endblock %}
+            {% endblock content %}
         </main>
         <footer>
             <div>
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Neil Clack</p>
-                <p><a href="#">Legal</a></p>
+                <p>
+                    © <script>document.write(new Date().getFullYear())</script> Neil Clack
+                </p>
+                <p>
+                    <a href="#">Legal</a>
+                </p>
             </div>
         </footer>
     </body>
