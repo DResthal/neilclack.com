@@ -2,15 +2,28 @@
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/resume.css' %}"/>
+    <link href="{% static 'fontawesomefree/css/regular.css' %}"
+          rel="stylesheet"
+          type="text/css"/>
 {% endblock head %}
 {% block content %}
-    <h1 class="title">{{ resume.name }}</h1>
+    <h1 class="title">
+        {{ resume.name }}
+        <div class="download">
+            <i class="fa-regular fa-file-pdf">
+                <a href="#"></a>
+            </i>
+            <sup>
+                Download
+            </sup>
+        </div>
+    </h1>
     <h2 class="sub-title">{{ resume.title }}</h2>
     <p class="resume-summary">{{ resume.summary }}</p>
     {% for j in jobs %}
         <div class="job-card">
-            <p class="job-title">{{ j.title }}</p>
             <p class="company">{{ j.company }}</p>
+            <p class="job-title">{{ j.title }}</p>
             <p class="date">
                 {{ j.start }} to
                 {% if j.end %}

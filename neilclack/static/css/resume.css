@@ -1,3 +1,28 @@
+.download {
+  text-align: center;
+  font-size: 1em;
+  float: right;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column; }
+  .download sup {
+    font-size: .3em; }
 
+.resume-summary {
+  width: 90%;
+  margin: 2em auto; }
+
+.job-card {
+  border-bottom: 1px solid black; }
+  .job-card .company {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline; }
+  .job-card .job-title {
+    font-weight: bold; }
+  .job-card .date {
+    font-style: italic; }
+  .job-card .job-description .jd-bullet {
+    margin: 1em auto; }
 
 /*# sourceMappingURL=resume.css.map */
