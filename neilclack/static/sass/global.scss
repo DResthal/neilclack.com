@@ -29,6 +29,10 @@ body {
     }
 
     .show-nav {
+        padding-top: 8rem;
+    }
+
+    .link-container {
         display: flex;
         flex-direction: column;
         height: 90vh;

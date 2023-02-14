@@ -22,13 +22,15 @@ body {
   .topnav .hide-nav {
     display: none; }
   .topnav .show-nav {
+    padding-top: 8rem; }
+  .topnav .link-container {
     display: flex;
     flex-direction: column;
     height: 90vh;
     z-index: 9;
     justify-content: flex-start;
     align-items: end; }
-    .topnav .show-nav a {
+    .topnav .link-container a {
       padding: 1em;
       color: black;
       text-decoration: none; }
