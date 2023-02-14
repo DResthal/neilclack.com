@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="{% static 'css/global.css' %}" />
         <link href="{% static 'fontawesomefree/css/fontawesome.css' %}"
               rel="stylesheet"
-              type="text/css">
+              type="text/css"/>
         <link href="{% static 'fontawesomefree/css/solid.css' %}"
               rel="stylesheet"
-              type="text/css">
+              type="text/css"/>
         <script type="text/javascript" src="{% static 'js/nav.js' %}"></script>
         {% block head %}
         {% endblock head %}
@@ -24,9 +24,11 @@
             <a href="#" class="logo">Neil Clack</a>
             <!-- Navigation links (hidden by default) -->
             <div id="nav-links" class="hide-nav">
-                <a href="#" onclick="toggleNav()">Projects</a>
-                <a href="#" onclick="toggleNav()">Resume</a>
-                <a href="#" onclick="toggleNav()">Contact</a>
+                <div class="link-container">
+                    <a href="#" onclick="toggleNav()">Projects</a>
+                    <a href="#" onclick="toggleNav()">Resume</a>
+                    <a href="#" onclick="toggleNav()">Contact</a>
+                </div>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
