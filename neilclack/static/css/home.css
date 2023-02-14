@@ -4,4 +4,10 @@ img {
   height: auto;
   margin-top: 2em; }
 
+.intro {
+  margin: auto;
+  margin-top: 2em; }
+  .intro a {
+    color: blue; }
+
 /*# sourceMappingURL=home.css.map */
