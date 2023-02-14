@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/resume.css' %}"/>
+{% endblock head %}
+{% block content %}
+    <h1 class="title">{{ resume.name }}</h1>
+    <h2 class="sub-title">{{ resume.title }}</h2>
+    <p class="resume-summary">{{ resume.summary }}</p>
+    {% for j in jobs %}
+        <div class="job-card">
+            <p class="job-title">{{ j.title }}</p>
+            <p class="company">{{ j.company }}</p>
+            <p class="date">
+                {{ j.start }} to
+                {% if j.end %}
+                    {{ j.end }}
+                {% else %}
+                    Current
+                {% endif %}
+            </p>
+            <div class="job-description">
+                <ul>
+                    {% for b in bullets %}<li class="jd-bullet">{{ b.bullet }}</li>{% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
