@@ -21,3 +21,7 @@ def resume(request):
     context = {"resume": resume, "jobs": jobs, "bullets": bullets}
 
     return render(request, "portfolio/resume.html", context)
+
+
+def contact(request):
+    return render(request, "portfolio/contact.html")
