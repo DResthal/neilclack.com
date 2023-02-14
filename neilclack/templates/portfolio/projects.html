@@ -1,34 +1,35 @@
-{% extends 'layout.html' %}
+{% extends "layout.html" %}
 {% load static %}
-{% block header %}
+{% block head %}
     <link rel='stylesheet' href="{% static 'css/projects.css' %}" />
-{% endblock %}
+{% endblock head %}
 {% block content %}
     <h1>Project Archives</h1>
-    <div class="project-search">
-</div>
+    <div class="project-search"></div>
     {% for project in projects %}
-    <div class="project-card">
-        <div class="project-info">
-            <p class="project-title">{{ project.title }}</p>
-            <p>{{ project.description }}</p>
-            <div class="project-links">
-                <a href="#" class="active-link link">Detail</a>
-            {% if project.github %}
-                <a href="{{project.github}}" class="active-link link" target="_blank">Github</a>
-            {% else %}
-                <a href="#" class="inactive-link link">Github</a>
-            {% endif %}
-            {% if project.live %}
-                <a href="{{project.live}}" class="active-link link" target="_blank">Live</a>
-            {% else %}
-                <a href="#" class="inactive-link link">Live</a>
-            {% endif %}
+        <div class="project-card">
+            <div class="project-info">
+                <p class="project-title">{{ project.title }}</p>
+                <div class="project-image">
+                    <img src="{{ project.image.url }}"
+                         height="200px"
+                         width="200px"
+                         alt="project image"/>
+                </div>
+                <p>{{ project.description }}</p>
+                <div class="project-links">
+                    {% if project.github %}
+                        <a href="{{ project.github }}" class="active-link link" target="_blank">Github</a>
+                    {% else %}
+                        <a href="#" class="inactive-link link">Github</a>
+                    {% endif %}
+                    {% if project.live %}
+                        <a href="{{ project.live }}" class="active-link link" target="_blank">Live</a>
+                    {% else %}
+                        <a href="#" class="inactive-link link">Live</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
-        <div class="project-image">
-            <img src="{{ project.image.url }}" />
-        </div>
-    </div>
     {% endfor %}
-{% endblock %}
+{% endblock content %}
