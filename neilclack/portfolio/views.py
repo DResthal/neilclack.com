@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Project, Resume, Job, Bullet
+from django.http import HttpResponse
+from .forms import ContactForm
 
 
 def index(request):
@@ -24,4 +26,17 @@ def resume(request):
 
 
 def contact(request):
-    return render(request, "portfolio/contact.html")
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            try:
+                form.save()
+            except:
+                return render(request, "portfolio/formerror.html")
+
+        return render(request, "portfolio/formerror.html")
+
+    context = {"form": form}
+    return render(request, "portfolio/contact.html", context)

@@ -1,0 +1,19 @@
+{% block head %}
+{% endblock head %}
+{% block content %}
+    <div class="container">
+        <h1>Uh Oh! There was an error submitting your contact request!</h1>
+        <p>
+            Don't worry. This is typically caused by a typo in your email address, invalid characters in your email, or missing information.
+            Please double check all fields and try again.
+        </p>
+        <p>
+            <em>If this error continues and all of your information is correct, to be honest, I probably already know about it and I'm working diligently to resolve the issue.
+            If the issue has been around a while, you can submit an issue on <a href="https://github.com/NeilClack/neilclack.com" target="_blank">Github</a>.</em>
+        </p>
+        <div class="container">
+            <a href="{% url 'contact' %}">Return to the Contact Page</a>
+            <a href="{% url 'index' %}">Return to the Home Page</a>
+        </div>
+    </div>
+{% endblock content %}
