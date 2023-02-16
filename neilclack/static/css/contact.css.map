@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,UAAW;EACP,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;;AAGhB,IAAK;EACD,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,aAAa;EAE9B,UAAM;IACF,WAAW,EAAE,IAAI;EAGrB,uBAAmB;IACf,OAAO,EAAE,IAAI;IACb,MAAM,EAAE,kBAAkB;IAC1B,KAAK,EAAE,GAAG",
+"sources": ["../sass/contact.scss"],
 "names": [],
 "file": "contact.css"
 }

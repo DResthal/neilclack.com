@@ -1,3 +1,16 @@
+.container {
+  width: 95%;
+  margin: auto; }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  form label {
+    padding-top: .5em; }
+  form input[type=submit] {
+    padding: .5em;
+    margin: 1em auto .5em auto;
+    width: 5em; }
 
 /*# sourceMappingURL=contact.css.map */
