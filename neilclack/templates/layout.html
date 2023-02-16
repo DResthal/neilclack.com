@@ -25,9 +25,9 @@
             <!-- Navigation links (hidden by default) -->
             <div id="nav-links" class="hide-nav">
                 <div class="link-container">
-                    <a href="#" onclick="toggleNav()">Projects</a>
-                    <a href="#" onclick="toggleNav()">Resume</a>
-                    <a href="#" onclick="toggleNav()">Contact</a>
+                    <a href="{% url 'projects' %}" onclick="toggleNav()">Projects</a>
+                    <a href="{% url 'resume' %}" onclick="toggleNav()">Resume</a>
+                    <a href="{% url 'contact' %}" onclick="toggleNav()">Contact</a>
                 </div>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
