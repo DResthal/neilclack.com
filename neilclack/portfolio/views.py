@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.conf import settings
 from .models import Project, Resume, Job, Bullet
 from django.core.mail import send_mail, BadHeaderError
@@ -17,6 +17,12 @@ def projects(request):
     context = {"projects": projects}
 
     return render(request, "portfolio/projects.html", context)
+
+
+def detail(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
+
+    return render(request, "portfolio/projectdetail.html", {"project": project})
 
 
 def resume(request):

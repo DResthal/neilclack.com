@@ -21,10 +21,11 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="#" class="logo">Neil Clack</a>
+            <a href="{% url 'index' %}" class="logo">Neil Clack</a>
             <!-- Navigation links (hidden by default) -->
             <div id="nav-links" class="hide-nav">
                 <div class="link-container">
+                    <a href="{% url 'index' %}" onclick="toggleNav()">Home</a>
                     <a href="{% url 'projects' %}" onclick="toggleNav()">Projects</a>
                     <a href="{% url 'resume' %}" onclick="toggleNav()">Resume</a>
                     <a href="{% url 'contact' %}" onclick="toggleNav()">Contact</a>

@@ -16,7 +16,7 @@
                          width="200px"
                          alt="project image"/>
                 </div>
-                <p>{{ project.description }}</p>
+                <p>{{ project.summary }}</p>
                 <div class="project-links">
                     {% if project.github %}
                         <a href="{{ project.github }}" class="active-link link" target="_blank">Github</a>
@@ -28,6 +28,7 @@
                     {% else %}
                         <a href="#" class="inactive-link link">Live</a>
                     {% endif %}
+                    <a href="{% url 'project_detail' project.id %}" class="active-link link">More</a>
                 </div>
             </div>
         </div>

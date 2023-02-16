@@ -12,6 +12,7 @@ class Category(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField(null=False)
+    summary = models.TextField(null=True, blank=False)
     github = models.URLField(null=True, blank=True)
     live = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to="projects", null=True)
