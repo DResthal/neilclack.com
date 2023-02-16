@@ -20,7 +20,7 @@
         {% endblock head %}
     </head>
     <body>
-        <div class="topnav">
+        <nav class="topnav">
             <a href="{% url 'index' %}" class="logo">Neil Clack</a>
             <!-- Navigation links (hidden by default) -->
             <div id="nav-links" class="hide-nav">
@@ -35,7 +35,7 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
                 <i class="fa-solid fa-bars"></i>
             </a>
-        </div>
+        </nav>
         <main>
             {% block content %}
             {% endblock content %}

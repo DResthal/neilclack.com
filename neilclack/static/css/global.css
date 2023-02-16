@@ -12,7 +12,8 @@ body {
   justify-content: flex-start; }
 
 .topnav {
-  position: relative;
+  position: sticky;
+  background-color: #ffffff;
   top: 0;
   padding: 1em; }
   .topnav .logo {
