@@ -1,3 +1,5 @@
+@import './variables';
+
 img {
     display: block;
     max-width: 100%;
@@ -9,6 +11,10 @@ img {
     margin: auto;
     margin-top: 2em;
     text-align: center;
+
+    @include mediumScreen() {
+        width: 80%;
+    }
 
     a {
         color: blue;
