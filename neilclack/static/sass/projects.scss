@@ -4,8 +4,9 @@
     width: 90%;
     margin: 1em auto;
     padding: .5em;
-    box-shadow: 3px 3px 5px grey;
+    box-shadow: 3px 3px 5px $darkColor;
     border-radius: 1em;
+    max-width: 600px
 }
 
 .project-info {
@@ -31,18 +32,18 @@
     text-decoration: none;
     width: 4em;
     text-align: center;
-    box-shadow: 2px 2px 3px grey;
+    box-shadow: 2px 2px 3px $darkColor;
 }
 
 .inactive-link {
-    background-color: #d4d4d4;
+    background-color: $darkColor;
     padding: .5em;
     border-radius: .5em;
     color: black;
     text-decoration: line-through;
     width: 4em;
     text-align: center;
-    box-shadow: 2px 2px 3px grey;
+    box-shadow: 2px 2px 3px $darkColor;
 }
 
 .center {

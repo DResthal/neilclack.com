@@ -2,8 +2,9 @@
   width: 90%;
   margin: 1em auto;
   padding: .5em;
-  box-shadow: 3px 3px 5px grey;
-  border-radius: 1em; }
+  box-shadow: 3px 3px 5px #858585;
+  border-radius: 1em;
+  max-width: 600px; }
 
 .project-info {
   padding: 1em; }
@@ -25,17 +26,17 @@
   text-decoration: none;
   width: 4em;
   text-align: center;
-  box-shadow: 2px 2px 3px grey; }
+  box-shadow: 2px 2px 3px #858585; }
 
 .inactive-link {
-  background-color: #d4d4d4;
+  background-color: #858585;
   padding: .5em;
   border-radius: .5em;
   color: black;
   text-decoration: line-through;
   width: 4em;
   text-align: center;
-  box-shadow: 2px 2px 3px grey; }
+  box-shadow: 2px 2px 3px #858585; }
 
 .center {
   display: block;
