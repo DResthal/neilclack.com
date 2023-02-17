@@ -89,4 +89,8 @@ footer div {
 footer {
   margin-top: auto; }
 
+p a {
+  padding: 0;
+  margin: 0; }
+
 /*# sourceMappingURL=global.css.map */
