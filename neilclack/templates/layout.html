@@ -24,15 +24,13 @@
             <a href="{% url 'index' %}" class="logo">Neil Clack</a>
             <!-- Navigation links (hidden by default) -->
             <div id="nav-links" class="hide-nav">
-                <div class="link-container">
-                    <a href="{% url 'index' %}" onclick="toggleNav()">Home</a>
-                    <a href="{% url 'projects' %}" onclick="toggleNav()">Projects</a>
-                    <a href="{% url 'resume' %}" onclick="toggleNav()">Resume</a>
-                    <a href="{% url 'contact' %}" onclick="toggleNav()">Contact</a>
-                </div>
+                <a href="{% url 'index' %}" onclick="toggleNav()">Home</a>
+                <a href="{% url 'projects' %}" onclick="toggleNav()">Projects</a>
+                <a href="{% url 'resume' %}" onclick="toggleNav()">Resume</a>
+                <a href="{% url 'contact' %}" onclick="toggleNav()">Contact</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+            <a on_event="javascript:void(0);" class="icon" onclick="toggleNav()">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </nav>

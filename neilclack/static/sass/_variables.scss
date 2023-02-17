@@ -1,1 +1,17 @@
+$primaryColor: #15C39A;
 $secondaryColor: #c7f0ff;
+$nearWhite: #fcfcfa;
+$darkColor: #858585;
+$black: black;
+
+@mixin mediumScreen() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin largeScreen() {
+    @media screen and (min-width: 1366px) {
+        @content;
+    }
+}
