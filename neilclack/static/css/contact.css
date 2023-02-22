@@ -1,6 +1,7 @@
 .container {
   width: 95%;
-  margin: auto; }
+  margin: auto;
+  max-width: 365px; }
 
 form {
   display: flex;
