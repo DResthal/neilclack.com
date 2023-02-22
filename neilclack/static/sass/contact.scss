@@ -1,3 +1,5 @@
+@import './variables';
+
 .container {
     width: 95%;
     margin: auto;
@@ -16,5 +18,12 @@ form {
         padding: .5em;
         margin: 1em auto .5em auto;
         width: 5em;
+    }
+}
+
+@include mediumScreen() {
+    .container {
+        width: 50%;
+        margin: auto;
     }
 }
