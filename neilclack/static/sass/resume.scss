@@ -1,3 +1,5 @@
+@import './variables';
+
 .download {
     text-align: center;
     font-size: 1em;
@@ -16,27 +18,39 @@
     margin: 2em auto;
 }
 
+.section-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 .job-card {
     border-bottom: 1px solid black;
+}
 
-    .company {
-        font-size: 1.2em;
-        font-weight: bold;
-        text-decoration: underline;
+.company {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.date {
+    font-style: italic;
+}
+
+.job-description {
+    .jd-bullet {
+        margin: 1em auto;
     }
+}
 
-    .job-title {
-        font-weight: bold;
+@include mediumScreen() {
+    .job-card {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 2em;
     }
-
-    .date {
-        font-style: italic;
-    }
-
-    .job-description {
-        .jd-bullet {
-            margin: 1em auto;
-        }
-    }
-
 }

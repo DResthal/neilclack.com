@@ -7,18 +7,7 @@
           type="text/css"/>
 {% endblock head %}
 {% block content %}
-    <h1 class="title">
-        {{ resume.name }}
-        <div class="download">
-            <a href="#" download>
-                <i class="fa-regular fa-file-pdf">
-                </i>
-            </a>
-            <sup>
-                Download
-            </sup>
-        </div>
-    </h1>
+    <h1 class="title">{{ resume.name }}</h1>
     <h2 class="sub-title">{{ resume.title }}</h2>
     <p class="resume-summary">{{ resume.summary }}</p>
     {% for j in jobs %}

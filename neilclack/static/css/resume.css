@@ -12,17 +12,31 @@
   width: 90%;
   margin: 2em auto; }
 
+.section-title {
+  font-weight: bold;
+  font-size: 1.5em; }
+
 .job-card {
   border-bottom: 1px solid black; }
-  .job-card .company {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: underline; }
-  .job-card .job-title {
-    font-weight: bold; }
-  .job-card .date {
-    font-style: italic; }
-  .job-card .job-description .jd-bullet {
-    margin: 1em auto; }
+
+.company {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline; }
+
+.job-title {
+  font-weight: bold; }
+
+.date {
+  font-style: italic; }
+
+.job-description .jd-bullet {
+  margin: 1em auto; }
+
+@media screen and (min-width: 768px) {
+  .job-card {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2em; } }
 
 /*# sourceMappingURL=resume.css.map */
